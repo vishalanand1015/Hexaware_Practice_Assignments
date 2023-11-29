@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>       
+  <session-factory>
+    <!-- Database connection settings -->
+    
+    <property name="hbm2ddl.auto">update</property>
+	<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+    <property name="show_sql">true</property>
+    
+    <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/mappings_practice</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">RAJharsh@10</property>
+    
+    
+  <!--  <mapping class="com.hexaware.mappings.entities.Address"/>
+    <mapping class="com.hexaware.mappings.entities.Student"/>
+     <mapping class="com.hexaware.mappings.entities.Employee"/>
+    <mapping class="com.hexaware.mappings.entities.Department"/>-->
+    <mapping class="com.hexaware.mapcspractice.entities.Bookings"/>
+    <mapping class="com.hexaware.mapcspractice.entities.UserCustomer"/>
+    
+  </session-factory>
+</hibernate-configuration>
